@@ -10,7 +10,7 @@
             const params = new URLSearchParams(window.location.search)
             var link_type = params.get("type")
             var spotify_id = params.get("id")
-            var href_string = `spotify:${link_type}:${spotify_id}`
+            var href_string = `spotify:${link_type ? link_type : "track"}:${spotify_id ? spotify_id : "6A08HjY2G2Kvbay51pHsgU"}`
             window.location.href = `${href_string}?play=1`;
       //      window.location.href = "spotify:album:4v66VhdnP3i6vhb90CiVIM"; // Replace with your desired URL
         };
